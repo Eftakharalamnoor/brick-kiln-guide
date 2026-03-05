@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ইট ভাটা ম্যানেজমেন্ট — ব্যবহারকারী গাইড</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== TOP NAVBAR ===== -->
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="sidebar-toggle" id="sidebarToggle" title="মেনু">☰</button>
+    <div class="topbar-brand">
+      <span class="brand-icon">🧱</span>
+      <span class="brand-name">ইট ভাটা ম্যানেজমেন্ট</span>
+      <span class="brand-sub">ব্যবহারকারী গাইড</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span class="version-badge">v১.০</span>
+    <span class="date-badge">মার্চ ২০২৬</span>
+  </div>
+</header>
+
+<!-- ===== LAYOUT WRAPPER ===== -->
+<div class="layout">
+
+  <!-- ===== LEFT SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-header">
+        <span>📖 বিষয়সূচি</span>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <div class="nav-group">
+          <div class="nav-group-label">সাধারণ</div>
+          <a class="nav-item" data-page="intro" href="#">
+            <span class="nav-icon">🔐</span>
+            <span>পরিচিতি ও লগইন</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">উৎপাদন</div>
+          <a class="nav-item" data-page="kiln-type" href="#">
+            <span class="nav-icon">🔥</span>
+            <span>চুল্লির ধরন</span>
+          </a>
+          <a class="nav-item" data-page="kiln-list" href="#">
+            <span class="nav-icon">🏭</span>
+            <span>চুল্লি তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="batch" href="#">
+            <span class="nav-icon">📦</span>
+            <span>ব্যাচ তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="output" href="#">
+            <span class="nav-icon">📊</span>
+            <span>আউটপুট</span>
+          </a>
+          <a class="nav-item" data-page="brick-type" href="#">
+            <span class="nav-icon">🧱</span>
+            <span>ইটের ধরন</span>
+          </a>
+          <a class="nav-item" data-page="khowa" href="#">
+            <span class="nav-icon">♻️</span>
+            <span>খোয়া উৎপাদন</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">শ্রমিক মজুরি</div>
+          <a class="nav-item" data-page="worker-type" href="#">
+            <span class="nav-icon">👷</span>
+            <span>শ্রমিক ধরন</span>
+          </a>
+          <a class="nav-item" data-page="worker-list" href="#">
+            <span class="nav-icon">👥</span>
+            <span>শ্রমিক তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="work-entry" href="#">
+            <span class="nav-icon">✏️</span>
+            <span>কাজের এন্ট্রি</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">সর্দার</div>
+          <a class="nav-item" data-page="sardar-list" href="#">
+            <span class="nav-icon">👤</span>
+            <span>সর্দার তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="dadon" href="#">
+            <span class="nav-icon">💰</span>
+            <span>দাদন ব্যবস্থাপনা</span>
+          </a>
+          <a class="nav-item" data-page="khoraki" href="#">
+            <span class="nav-icon">🍽️</span>
+            <span>খোরাকি এন্ট্রি</span>
+          </a>
+          <a class="nav-item" data-page="sardar-work" href="#">
+            <span class="nav-icon">📋</span>
+            <span>সর্দার কাজের এন্ট্রি</span>
+          </a>
+          <a class="nav-item" data-page="crop-type" href="#">
+            <span class="nav-icon">🌾</span>
+            <span>ক্রপ টাইপ</span>
+          </a>
+          <a class="nav-item" data-page="sardar-report" href="#">
+            <span class="nav-icon">📊</span>
+            <span>সর্দার রিপোর্ট</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">ক্রয়-বিক্রয়</div>
+          <a class="nav-item" data-page="supplier" href="#">
+            <span class="nav-icon">🏪</span>
+            <span>সাপ্লায়ার তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="material" href="#">
+            <span class="nav-icon">🪨</span>
+            <span>মালামাল তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="purchase" href="#">
+            <span class="nav-icon">🛒</span>
+            <span>ক্রয় এন্ট্রি</span>
+          </a>
+          <a class="nav-item" data-page="inventory" href="#">
+            <span class="nav-icon">📦</span>
+            <span>ইনভেন্টরি</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">গ্রাহক ও চালান</div>
+          <a class="nav-item" data-page="customer" href="#">
+            <span class="nav-icon">🧑‍💼</span>
+            <span>গ্রাহক ব্যবস্থাপনা</span>
+          </a>
+          <a class="nav-item" data-page="challan" href="#">
+            <span class="nav-icon">🧾</span>
+            <span>চালান তালিকা</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">ডেলিভারি</div>
+          <a class="nav-item" data-page="trip" href="#">
+            <span class="nav-icon">🚛</span>
+            <span>ট্রিপ তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="driver" href="#">
+            <span class="nav-icon">🧑‍✈️</span>
+            <span>ড্রাইভার তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="vehicle" href="#">
+            <span class="nav-icon">🚚</span>
+            <span>যানবাহন</span>
+          </a>
+          <a class="nav-item" data-page="gatepass" href="#">
+            <span class="nav-icon">🎫</span>
+            <span>গেট পাস</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">হিসাব ও রিপোর্ট</div>
+          <a class="nav-item" data-page="voucher" href="#">
+            <span class="nav-icon">📋</span>
+            <span>ভাউচার</span>
+          </a>
+          <a class="nav-item" data-page="income-expense" href="#">
+            <span class="nav-icon">📊</span>
+            <span>আয়-ব্যয় রিপোর্ট</span>
+          </a>
+          <a class="nav-item" data-page="profit-loss" href="#">
+            <span class="nav-icon">📉</span>
+            <span>লাভ/ক্ষতি বিবরণী</span>
+          </a>
+          <a class="nav-item" data-page="party-ledger" href="#">
+            <span class="nav-icon">👤</span>
+            <span>পার্টি লেজার</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-label">সেটিংস</div>
+          <a class="nav-item" data-page="settings" href="#">
+            <span class="nav-icon">🏢</span>
+            <span>কোম্পানি তথ্য</span>
+          </a>
+          <a class="nav-item" data-page="bank-list" href="#">
+            <span class="nav-icon">🏦</span>
+            <span>ব্যাংক তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="mobile-banking" href="#">
+            <span class="nav-icon">📱</span>
+            <span>মোবাইল ব্যাংকিং</span>
+          </a>
+          <a class="nav-item" data-page="cash-type" href="#">
+            <span class="nav-icon">💵</span>
+            <span>ক্যাশ টাইপ তালিকা</span>
+          </a>
+          <a class="nav-item" data-page="payment-account" href="#">
+            <span class="nav-icon">💳</span>
+            <span>পেমেন্ট অ্যাকাউন্ট</span>
+          </a>
+          <a class="nav-item" data-page="user-management" href="#">
+            <span class="nav-icon">👥</span>
+            <span>ইউজার ম্যানেজমেন্ট</span>
+          </a>
+          <a class="nav-item" data-page="roles" href="#">
+            <span class="nav-icon">🛡️</span>
+            <span>রোল ম্যানেজমেন্ট</span>
+          </a>
+        </div>
+
+      </nav>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content" id="mainContent">
+    <div id="pageContainer"></div>
+  </main>
+
+  <!-- ===== RIGHT PAGE INDEX ===== -->
+  <aside class="right-panel" id="rightPanel">
+    <div class="right-panel-inner">
+      <div class="right-panel-title">এই পেজে</div>
+      <nav id="pageIndex" class="page-index-nav"></nav>
+    </div>
+  </aside>
+
+</div><!-- end .layout -->
+
+  <!-- ═══ মডিউল পেজ ফাইলসমূহ ═══════════════════════════════
+       নতুন মডিউল যোগ করতে এখানে <script> ট্যাগ যোগ করুন
+       এবং pages-registry.js এ ...PAGES_NEWMODULE যোগ করুন
+  ════════════════════════════════════════════════════════ -->
+  <script src="pages/intro.js"></script>
+  <script src="pages/production.js"></script>
+  <script src="pages/worker.js"></script>
+  <script src="pages/sardar.js"></script>
+  <script src="pages/purchase.js"></script>
+  <script src="pages/customer_challan.js"></script>
+  <script src="pages/delivery.js"></script>
+  <script src="pages/finance.js"></script>
+  <script src="pages/settings.js"></script>
+
+  <!-- ═══ PAGES রেজিস্ট্রি (সব মডিউল একত্রিত) ════════════ -->
+  <script src="pages-registry.js"></script>
+
+  <!-- ═══ মূল অ্যাপ লজিক ══════════════════════════════════ -->
+  <script src="app.js"></script>
+</body>
+</html>
