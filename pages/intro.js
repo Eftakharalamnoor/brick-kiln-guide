@@ -6,13 +6,75 @@ var PAGES_INTRO = {
 
   intro: {
     title: 'পরিচিতি ও লগইন',
-    sections: ['লগইন প্রক্রিয়া', 'ড্যাশবোর্ড পরিচিতি', 'মেনু নেভিগেশন'],
+    sections: ['গাইড সার্চ', 'লগইন প্রক্রিয়া', 'ড্যাশবোর্ড পরিচিতি', 'মেনু নেভিগেশন'],
     content: `
       <div class="page-hero">
         <div class="page-hero-icon">🔐</div>
         <div>
           <h1>পরিচিতি ও লগইন</h1>
           <p>সফটওয়্যারে প্রবেশ এবং ড্যাশবোর্ড ব্যবহার নির্দেশিকা</p>
+        </div>
+      </div>
+
+      <div class="section" id="sec-গাইড-সার্চ">
+        <div class="section-title">🔍 গাইড সার্চ - যেকোনো বিষয় দ্রুত খুঁজুন</div>
+        <p>গাইডের উপরে একটি সার্চ বার আছে যা দিয়ে আপনি যেকোনো বিষয় দ্রুত খুঁজে পেতে পারেন।</p>
+        
+        <div class="info-box success">
+          <div class="info-box-title">✨ সার্চ ফিচারসমূহ</div>
+          <table class="doc-table">
+            <tr><th>ফিচার</th><th>কীভাবে ব্যবহার করবেন</th></tr>
+            <tr><td>🔍 সার্চ বার</td><td>উপরের সার্চ বারে ক্লিক করে লিখুন</td></tr>
+            <tr><td>⌨️ কীবোর্ড শর্টকাট</td><td><kbd>Ctrl</kbd>+<kbd>K</kbd> চাপুন (বা <kbd>Cmd</kbd>+<kbd>K</kbd> Mac এ)</td></tr>
+            <tr><td>📝 অটো-সাজেশন</td><td>লিখতে শুরু করলেই ফলাফল দেখাবে</td></tr>
+            <tr><td>🎯 সেকশনে যান</td><td>ফলাফলে ক্লিক করলে সরাসরি সেই সেকশনে চলে যাবে</td></tr>
+            <tr><td>✕ ক্লিয়ার</td><td>সার্চ ক্লিয়ার করতে <kbd>✕</kbd> বাটনে ক্লিক করুন</td></tr>
+            <tr><td>⎋ বন্ধ করুন</td><td><kbd>Escape</kbd> চাপুন</td></tr>
+          </table>
+        </div>
+
+        <h4 class="sub-title">কী কী সার্চ করা যাবে:</h4>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="fc-icon">📄</div>
+            <h5>পেজের নাম</h5>
+            <p>যেমন: চুল্লি, ইট, সর্দার, পেমেন্ট</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">📋</div>
+            <h5>সেকশন</h5>
+            <p>যেমন: চুল্লির ধরন, দাদন, খোরাকি</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">📝</div>
+            <h5>বিষয়বস্তু</h5>
+            <p>যেমন: ভ্যালিডেশন, ফর্ম, রিপোর্ট</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">🔤</div>
+            <h5>ইংরেজি শব্দ</h5>
+            <p>যেমন: Furnace, Batch, Payment</p>
+          </div>
+        </div>
+
+        <div class="info-box tip">
+          <div class="info-box-title">💜 সার্চ টিপস</div>
+          <ul class="bullet-list">
+            <li>কমপক্ষে ২টি অক্ষর লিখতে হবে</li>
+            <li>বাংলা এবং ইংরেজি দুইভাবেই সার্চ করা যাবে</li>
+            <li>সার্চ রেজাল্টে ক্লিক করলে সরাসরি সেই পেজে চলে যাবে</li>
+            <li>সেকশন ম্যাচ করলে সেই সেকশনটি হাইলাইট হবে</li>
+          </ul>
+        </div>
+
+        <div class="info-box note">
+          <div class="info-box-title">📊 সার্চ রেজাল্ট</div>
+          <p>সার্চ বারে লিখলে একটি ড্রপডাউন দেখাবে যেখানে:</p>
+          <ul class="bullet-list">
+            <li>মোট কতটি ফলাফল পাওয়া গেছে</li>
+            <li>প্রতিটি ফলাফলের শিরোনাম এবং অবস্থান</li>
+            <li>সার্চ টার্মটি হাইলাইট করা থাকবে</li>
+          </ul>
         </div>
       </div>
 

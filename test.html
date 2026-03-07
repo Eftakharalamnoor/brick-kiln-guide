@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test - ইট ভাটা গাইড</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { padding: 20px; font-family: 'Hind Siliguri', sans-serif; }
+    .test-box { background: #f0f0f0; padding: 20px; margin: 10px 0; border-radius: 8px; }
+    .error { color: red; }
+    .success { color: green; }
+  </style>
+</head>
+<body>
+  <h1>🔍 টেস্ট পেজ</h1>
+  
+  <div class="test-box">
+    <h2>১. ফাইল লোড চেক</h2>
+    <div id="load-check"></div>
+  </div>
+
+  <div class="test-box">
+    <h2>২. PAGES অবজেক্ট চেক</h2>
+    <div id="pages-check"></div>
+  </div>
+
+  <div class="test-box">
+    <h2>৩. কন্টেন্ট চেক</h2>
+    <div id="content-check"></div>
+  </div>
+
+  <script src="pages/intro.js"></script>
+  <script src="pages/production.js"></script>
+  <script src="pages-registry.js"></script>
+  
+  <script>
+    // Test 1: File load
+    document.getElementById('load-check').innerHTML = `
+      <p class="success">✅ intro.js লোড হয়েছে</p>
+      <p class="success">✅ production.js লোড হয়েছে</p>
+      <p class="success">✅ pages-registry.js লোড হয়েছে</p>
+    `;
+
+    // Test 2: PAGES object
+    setTimeout(() => {
+      const pagesCheck = document.getElementById('pages-check');
+      if (typeof PAGES !== 'undefined') {
+        pagesCheck.innerHTML = `<p class="success">✅ PAGES অবজেক্ট আছে</p>
+          <p>মোট পেজ: ${Object.keys(PAGES).length}</p>
+          <p>পেজের নাম: ${Object.keys(PAGES).join(', ')}</p>`;
+        
+        // Test 3: Content check
+        const contentCheck = document.getElementById('content-check');
+        if (PAGES['kiln-type']) {
+          const hasContent = PAGES['kiln-type'].content && PAGES['kiln-type'].content.length > 0;
+          if (hasContent) {
+            contentCheck.innerHTML = `<p class="success">✅ kiln-type কন্টেন্ট আছে (${PAGES['kiln-type'].content.length} characters)</p>
+              <p>Sections: ${PAGES['kiln-type'].sections.join(', ')}</p>
+              <p>First 100 chars: ${PAGES['kiln-type'].content.substring(0, 100)}...</p>`;
+          } else {
+            contentCheck.innerHTML = `<p class="error">❌ kiln-type কন্টেন্ট খালি!</p>`;
+          }
+        } else {
+          contentCheck.innerHTML = `<p class="error">❌ kiln-type পেজ নেই!</p>`;
+        }
+      } else {
+        pagesCheck.innerHTML = `<p class="error">❌ PAGES অবজেক্ট নেই!</p>`;
+      }
+    }, 100);
+  </script>
+</body>
+</html>

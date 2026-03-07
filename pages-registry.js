@@ -33,7 +33,7 @@ var PAGES = {
   // ভাউচার ও রিপোর্ট
   ...PAGES_FINANCE,
 
-  // সেটিংস ও রোল
-  ...PAGES_SETTINGS,
+  // ভবিষ্যৎ আপডেট
+  ...PAGES_FUTURE_UPDATES,
 
 };

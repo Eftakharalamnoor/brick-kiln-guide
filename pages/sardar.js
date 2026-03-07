@@ -1,12 +1,15 @@
 // pages/sardar.js
-// মডিউল: সর্দার ব্যবস্থাপনা
+// মডিউল: সর্দার ব্যবস্থাপনা (বিস্তারিত)
 // পেজ: sardar-list, dadon, khoraki, sardar-work, crop-type, sardar-report
 
 var PAGES_SARDAR = {
 
+  // ===================================================
+  // SARDAR LIST - সর্দার তালিকা (বিস্তারিত)
+  // ===================================================
   'sardar-list': {
     title: 'সর্দার তালিকা',
-    sections: ['পেজ পরিচিতি', 'পরিসংখ্যান কার্ড', 'নতুন সর্দার যোগ', 'ফর্মের বিবরণ', 'তালিকা কলাম'],
+    sections: ['পেজ পরিচিতি', 'কোন ক্রমে তৈরি করবেন', 'সর্দার কী ও কেন প্রয়োজন', 'পরিসংখ্যান কার্ড', 'নতুন সর্দার যোগ - ধাপে ধাপে', 'ফর্মের বিবরণ', 'প্রতিটি ফিল্ডের বিস্তারিত', 'তালিকা কলাম', 'সম্পাদনা', 'সক্রিয়-নিষ্ক্রিয়', 'সাধারণ সমস্যা'],
     content: `
       <div class="page-hero">
         <div class="page-hero-icon">👤</div>
@@ -20,6 +23,52 @@ var PAGES_SARDAR = {
         <div class="section-title">পেজ পরিচিতি</div>
         <span class="nav-path">মেনু → সর্দার → <strong>সর্দার তালিকা</strong></span>
         <p>সর্দার হলেন শ্রমিক দলের নেতা যিনি একটি নির্দিষ্ট গ্রুপের শ্রমিকদের পরিচালনা করেন। এখানে সকল সর্দারের ব্যক্তিগত তথ্য, দাদন ও খোরাকির হিসাব একত্রে দেখা যায়।</p>
+        
+        <div class="info-box warning" style="border-left-color:var(--warning);background:#fffbeb">
+          <div class="info-box-title" style="color:var(--warning)">⚠️ কোন ক্রমে তৈরি করবেন</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:10px;font-size:14px;flex-wrap:wrap">
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ১</span>
+            <span>গ্রুপ টাইপ</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ২</span>
+            <span>সর্দার তালিকা</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ৩</span>
+            <span>দাদন ব্যবস্থাপনা</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ৪</span>
+            <span>খোরাকি এন্ট্রি</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ৫</span>
+            <span>সর্দার কাজের এন্ট্রি</span>
+          </div>
+          <p style="margin-top:10px">সর্দার তৈরি করার আগে অবশ্যই <strong>গ্রুপ টাইপ</strong> তৈরি করে নিন। গ্রুপ টাইপ না থাকলে সর্দার তৈরি করা যাবে না।</p>
+        </div>
+      </div>
+
+      <div class="section" id="sec-সর্দার-কী-ও-কেন-প্রয়োজন">
+        <div class="section-title">সর্দার কী ও কেন প্রয়োজন?</div>
+        
+        <div class="info-box note">
+          <div class="info-box-title">💡 সর্দার কী?</div>
+          <p><strong>সর্দার</strong> হলেন শ্রমিক দলের নেতা যিনি একটি নির্দিষ্ট গ্রুপের শ্রমিকদের পরিচালনা করেন। সর্দারের মাধ্যমে:</p>
+          <ul class="bullet-list">
+            <li>শ্রমিকদের কাজ বণ্টন করা হয়</li>
+            <li>দাদন (অগ্রিম অর্থ) প্রদান করা হয়</li>
+            <li>খোরাকি (খাবার খরচ) ব্যবস্থাপনা করা হয়</li>
+            <li>উৎপাদন ক্রেডিট ট্র্যাক করা হয়</li>
+          </ul>
+        </div>
+
+        <div class="info-box success">
+          <div class="info-box-title">✅ সর্দার ব্যবস্থাপনার সুবিধা</div>
+          <ul class="bullet-list">
+            <li>শ্রমিক দলের নেতৃত্ব পরিষ্কার হয়</li>
+            <li>দাদন ও খোরাকির হিসাব স্বচ্ছ থাকে</li>
+            <li>উৎপাদন ক্রেডিট সঠিকভাবে বণ্টন করা যায়</li>
+            <li>শ্রমিক ব্যবস্থাপনা সহজ হয়</li>
+          </ul>
+        </div>
       </div>
 
       <div class="section" id="sec-পরিসংখ্যান-কার্ড">

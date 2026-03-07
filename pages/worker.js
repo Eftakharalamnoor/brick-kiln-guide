@@ -1,10 +1,13 @@
-// pages/worker.js — শ্রমিক মজুরি ব্যবস্থাপনা
+// pages/worker.js — শ্রমিক মজুরি ব্যবস্থাপনা (বিস্তারিত)
 
 var PAGES_WORKER = {
 
+  // ===================================================
+  // WORKER TYPE - শ্রমিক ধরন (বিস্তারিত)
+  // ===================================================
   'worker-type': {
-    title: 'শ্রমিক ধরন ব্যবস্থাপনা',
-    sections: ['পেজ পরিচিতি', 'পরিসংখ্যান কার্ড', 'নতুন শ্রমিক ধরন', 'ফর্মের বিবরণ', 'তালিকা কলাম'],
+    title: 'শ্রমিক ধরন',
+    sections: ['পেজ পরিচিতি', 'কোন ক্রমে তৈরি করবেন', 'শ্রমিক ধরন কী ও কেন প্রয়োজন', 'পরিসংখ্যান কার্ড', 'নতুন শ্রমিক ধরন তৈরি - ধাপে ধাপে', 'ফর্মের বিবরণ', 'প্রতিটি ফিল্ডের বিস্তারিত', 'তালিকা ব্যবস্থাপনা', 'সম্পাদনা', 'সক্রিয়-নিষ্ক্রিয়', 'সাধারণ সমস্যা'],
     content: `
       <div class="page-hero" style="background:linear-gradient(135deg,#6366f1,#ec4899)">
         <div class="page-hero-icon">👷</div>
@@ -18,9 +21,69 @@ var PAGES_WORKER = {
         <div class="section-title">পেজ পরিচিতি</div>
         <span class="nav-path">মেনু → শ্রমিক মজুরি → <strong>শ্রমিক ধরন</strong></span>
         <p>এই পেজে শ্রমিকদের বিভিন্ন পদবি বা ক্যাটাগরি তৈরি করা হয়। যেমন: মিস্ত্রি, হেলপার, রাজমিস্ত্রি ইত্যাদি। একবার তৈরি করলে নতুন শ্রমিক যোগ করার সময় পদবি ড্রপডাউনে এই তালিকা থেকে নির্বাচন করা যাবে।</p>
-        <div class="info-box warning">
-          <div class="info-box-title">⚠️ প্রথমে এটি করুন</div>
-          শ্রমিক তালিকায় নতুন শ্রমিক যোগ করার আগে এখানে অন্তত একটি শ্রমিক ধরন তৈরি করুন। না হলে পদবি নির্বাচন করা যাবে না।
+        
+        <div class="info-box warning" style="border-left-color:var(--warning);background:#fffbeb">
+          <div class="info-box-title" style="color:var(--warning)">⚠️ কোন ক্রমে তৈরি করবেন</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:10px;font-size:14px;flex-wrap:wrap">
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ১</span>
+            <span>শ্রমিক ধরন</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ২</span>
+            <span>শ্রমিক তালিকা</span>
+            <span style="color:var(--text-muted)">→</span>
+            <span style="background:var(--primary);color:white;padding:4px 12px;border-radius:20px;font-size:12px">ধাপ ৩</span>
+            <span>কাজের এন্ট্রি</span>
+          </div>
+          <p style="margin-top:10px">শ্রমিক তালিকায় নতুন শ্রমিক যোগ করার আগে এখানে অন্তত একটি শ্রমিক ধরন তৈরি করুন। না হলে পদবি নির্বাচন করা যাবে না।</p>
+        </div>
+      </div>
+
+      <div class="section" id="sec-শ্রমিক-ধরন-কী-ও-কেন-প্রয়োজন">
+        <div class="section-title">শ্রমিক ধরন কী ও কেন প্রয়োজন?</div>
+        
+        <h4 class="sub-title">শ্রমিক ধরনের উদাহরণ:</h4>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="fc-icon">👷</div>
+            <h5>মিস্ত্রি (Mason)</h5>
+            <p>মূল নির্মাণ কাজে দক্ষ শ্রমিক</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">🏭</div>
+            <h5>উৎপাদন স্টাফ</h5>
+            <p>ইট উৎপাদনে নিয়োজিত শ্রমিক</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">🔧</div>
+            <h5>রক্ষণাবেক্ষণ স্টাফ</h5>
+            <p>যন্ত্রপাতি মেরামতকারী শ্রমিক</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">🛡️</div>
+            <h5>নিরাপত্তা স্টাফ</h5>
+            <p>নিরাপত্তা রক্ষাকারী শ্রমিক</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">🚛</div>
+            <h5>লজিস্টিক স্টাফ</h5>
+            <p>পরিবহন ও ডেলিভারি শ্রমিক</p>
+          </div>
+          <div class="feature-card">
+            <div class="fc-icon">👤</div>
+            <h5>সাধারণ স্টাফ</h5>
+            <p>সাধারণ কাজে নিয়োজিত শ্রমিক</p>
+          </div>
+        </div>
+
+        <div class="info-box success">
+          <div class="info-box-title">✅ শ্রমিক ধরন ব্যবস্থাপনার সুবিধা</div>
+          <ul class="bullet-list">
+            <li>শ্রমিকদের পদবি অনুযায়ী শ্রেণিবিভাগ করা যায়</li>
+            <li>প্রতিটি পদবির জন্য আলাদা মজুরি নির্ধারণ করা যায়</li>
+            <li>কাজের এন্ট্রিতে দ্রুত পদবি নির্বাচন করা যায়</li>
+            <li>পদবি অনুযায়ী রিপোর্ট তৈরি করা যায়</li>
+            <li>মজুরি বিশ্লেষণ সহজ হয়</li>
+          </ul>
         </div>
       </div>
 

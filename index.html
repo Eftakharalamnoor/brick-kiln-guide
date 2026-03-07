@@ -20,6 +20,23 @@
       <span class="brand-sub">ব্যবহারকারী গাইড</span>
     </div>
   </div>
+  
+  <!-- ===== SEARCH BAR ===== -->
+  <div class="topbar-search">
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input 
+        type="text" 
+        id="globalSearch" 
+        class="search-input" 
+        placeholder="সার্চ করুন... (যেমন: চুল্লি, ইট, সর্দার, পেমেন্ট)"
+        autocomplete="off"
+      />
+      <button class="search-clear-btn" id="searchClear" title="মুছে ফেলুন">✕</button>
+    </div>
+    <div class="search-shortcut">Ctrl+K</div>
+  </div>
+  
   <div class="topbar-right">
     <span class="version-badge">v১.০</span>
     <span class="date-badge">মার্চ ২০২৬</span>
@@ -191,8 +208,20 @@
         </div>
 
         <div class="nav-group">
+          <div class="nav-group-label">সাহায্য ও তথ্য</div>
+          <a class="nav-item" data-page="future-updates" href="#">
+            <span class="nav-icon">🚀</span>
+            <span>ভবিষ্যৎ আপডেট</span>
+          </a>
+          <a class="nav-item" data-page="whats-new" href="#">
+            <span class="nav-icon">📋</span>
+            <span>নতুন কী আছে</span>
+          </a>
+        </div>
+
+        <div class="nav-group">
           <div class="nav-group-label">সেটিংস</div>
-          <a class="nav-item" data-page="settings" href="#">
+          <a class="nav-item" data-page="company" href="#">
             <span class="nav-icon">🏢</span>
             <span>কোম্পানি তথ্য</span>
           </a>
@@ -253,7 +282,7 @@
   <script src="pages/customer_challan.js"></script>
   <script src="pages/delivery.js"></script>
   <script src="pages/finance.js"></script>
-  <script src="pages/settings.js"></script>
+  <script src="pages/future-updates.js"></script>
 
   <!-- ═══ PAGES রেজিস্ট্রি (সব মডিউল একত্রিত) ════════════ -->
   <script src="pages-registry.js"></script>
